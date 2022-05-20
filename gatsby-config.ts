@@ -5,6 +5,7 @@ const config: GatsbyConfig = {
     title: `Software Quality Day @ Novatec`,
     siteUrl: `https://www.yourdomain.tld`
   },
+  pathPrefix: 'software-quality-day-at-nt',
   plugins: ["gatsby-plugin-styled-components"]
 };
 

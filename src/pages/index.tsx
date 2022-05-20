@@ -14,10 +14,11 @@ const Wrapper = styled.main`
   display: flex;
   flex-flow: column;
   align-items: center;
+  margin-bottom: 2rem;
   
   @media (min-width: 960px) {
     width: 960px;
-    margin: 0 auto;
+    margin: 0 auto 2rem;
   }
 
   @media (max-width: 959px) {

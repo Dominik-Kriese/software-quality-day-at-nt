@@ -62,8 +62,8 @@ export const schedule: Schedule = {
             ]
         },
         {
-            from: new Date(2022, 5, 20, 13, 0),
-            to: new Date(2022, 5, 20, 14, 0),
+            from: new Date(2022, 5, 3, 14, 0),
+            to: new Date(2022,  5, 3, 15, 0),
             sessions: [
                 {name: 'Meine coole Session', host: 'DKR'},
                 {name: 'Meine coole Session', host: 'DKR'},
@@ -72,18 +72,8 @@ export const schedule: Schedule = {
             ]
         },
         {
-            from: new Date(2022, 5, 20, 14, 0),
-            to: new Date(2022,  5, 20, 15, 0),
-            sessions: [
-                {name: 'Meine coole Session', host: 'DKR'},
-                {name: 'Meine coole Session', host: 'DKR'},
-                {name: 'Meine coole Session', host: 'DKR'},
-                {name: 'Meine coole Session', host: 'DKR'},
-            ]
-        },
-        {
-            from: new Date(2022, 5, 20, 16, 0),
-            to: new Date(2022,  5, 20, 17, 0),
+            from: new Date(2022, 5, 3, 16, 0),
+            to: new Date(2022,  5, 3, 17, 0),
             overarchingTopic: 'Let\'s wrap it up'
         }
     ]

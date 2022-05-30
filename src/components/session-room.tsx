@@ -1,6 +1,6 @@
 import * as React from "react";
 import styled from "styled-components";
-import {Session} from "../../../data/schedule";
+import {Session} from "../data/schedule";
 import { RoomCard, RoomContent, RoomTitle } from "./room-components";
 
 type SessionProps = {

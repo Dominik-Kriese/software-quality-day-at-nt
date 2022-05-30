@@ -1,4 +1,4 @@
-import {Session, TimeSlot} from "../../../data/schedule";
+import {Session, TimeSlot} from "../data/schedule";
 import * as dayjs from "dayjs";
 import SessionRoom from "./session-room";
 import * as React from "react";

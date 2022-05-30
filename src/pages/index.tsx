@@ -5,9 +5,8 @@ import {schedule} from "../data/schedule";
 import 'dayjs/locale/de'
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faVideo} from "@fortawesome/free-solid-svg-icons";
-import Timeslot from "./index/components/timeslot";
+import Timeslot from "../components/timeslot";
 
-// TODO insert start and end.
 // TODO insert zoom link.
 
 const Wrapper = styled.main`
@@ -50,7 +49,7 @@ const IndexPage = () => {
     return (
         <Wrapper>
             <Headline>Software Quality Day Schedule</Headline>
-            <JoinLink href={'http://www.google.de'} target={'_blank'}>Join us in Zoom <FontAwesomeIcon icon={faVideo}/></JoinLink>
+            <JoinLink href={'https://novatec-gmbh.zoom.us/j/63581891508?pwd=VXJZcXQ2NCtTM2JPK1ZUV3ZmYnp4UT09&from=addon'} target={'_blank'}>Join us in Zoom <FontAwesomeIcon icon={faVideo}/></JoinLink>
             {schedule.timeslots.map((timeslot, i) => <Timeslot key={`ts${i}`} timeslot={timeslot}/>)}
         </Wrapper>
     )

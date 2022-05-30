@@ -25,50 +25,60 @@ export const schedule: Schedule = {
             from: new Date(2022, 5, 3, 10, 0),
             to: new Date(2022, 5, 3, 11, 0),
             sessions: [
-                {name: 'Meine coole Session', host: 'DKR'},
-                {name: 'Meine coole Session', host: 'DKR'},
-                {name: 'Meine coole Session', host: 'DKR'},
-                {name: 'Meine coole Session', host: 'DKR'},
+                {name: 'Your awesome session', host: 'YOU'},
+                {name: 'Your awesome session', host: 'YOU'},
+                {name: 'Your awesome session', host: 'YOU'},
+                {name: 'Your awesome session', host: 'YOU'},
             ]
         },
         {
             from: new Date(2022, 5, 3, 11, 0),
             to: new Date(2022, 5, 3, 12, 0),
             sessions: [
-                {name: 'Meine coole Session', host: 'DKR'},
-                {name: 'Meine coole Session', host: 'DKR'},
-                {name: 'Meine coole Session', host: 'DKR'},
-                {name: 'Meine coole Session', host: 'DKR'},
+                {name: 'Your awesome session', host: 'YOU'},
+                {name: 'Your awesome session', host: 'YOU'},
+                {name: 'Your awesome session', host: 'YOU'},
+                {name: 'Your awesome session', host: 'YOU'},
             ]
         },
         {
             from: new Date(2022, 5, 3, 12, 0),
             to: new Date(2022, 5, 3, 13, 0),
             sessions: [
-                {name: 'Meine coole Session', host: 'DKR'},
-                {name: 'Meine coole Session', host: 'DKR'},
-                {name: 'Meine coole Session', host: 'DKR'},
-                {name: 'Meine coole Session', host: 'DKR'},
+                {name: 'Your awesome session', host: 'YOU'},
+                {name: 'Your awesome session', host: 'YOU'},
+                {name: 'Your awesome session', host: 'YOU'},
+                {name: 'Your awesome session', host: 'YOU'},
             ]
         },
         {
             from: new Date(2022, 5, 3, 13, 0),
             to: new Date(2022, 5, 3, 14, 0),
             sessions: [
-                {name: 'Meine coole Session', host: 'DKR'},
-                {name: 'Meine coole Session', host: 'DKR'},
-                {name: 'Meine coole Session', host: 'DKR'},
-                {name: 'Meine coole Session', host: 'DKR'},
+                {name: 'Your awesome session', host: 'YOU'},
+                {name: 'Your awesome session', host: 'YOU'},
+                {name: 'Your awesome session', host: 'YOU'},
+                {name: 'Your awesome session', host: 'YOU'},
             ]
         },
         {
             from: new Date(2022, 5, 3, 14, 0),
             to: new Date(2022,  5, 3, 15, 0),
             sessions: [
-                {name: 'Meine coole Session', host: 'DKR'},
-                {name: 'Meine coole Session', host: 'DKR'},
-                {name: 'Meine coole Session', host: 'DKR'},
-                {name: 'Meine coole Session', host: 'DKR'},
+                {name: 'Your awesome session', host: 'YOU'},
+                {name: 'Your awesome session', host: 'YOU'},
+                {name: 'Your awesome session', host: 'YOU'},
+                {name: 'Your awesome session', host: 'YOU'},
+            ]
+        },
+        {
+            from: new Date(2022, 5, 3, 15, 0),
+            to: new Date(2022,  5, 3, 16, 0),
+            sessions: [
+                {name: 'Your awesome session', host: 'YOU'},
+                {name: 'Your awesome session', host: 'YOU'},
+                {name: 'Your awesome session', host: 'YOU'},
+                {name: 'Your awesome session', host: 'YOU'},
             ]
         },
         {

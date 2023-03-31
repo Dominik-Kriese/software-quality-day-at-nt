@@ -9,10 +9,15 @@ export const RoomCard = styled.div`
 
 export const RoomTitle = styled.div`
   font-weight: bold;
-  background-color: #5B4897;
+  background-color: ${props => props.role === 'alert' ? '#E9454E' : '#5B4897'};
   padding: 0.75rem 0.75rem 0.5rem;
   display: flex;
   justify-content: space-between;
+  cursor: pointer;
+  
+  &:hover {
+    background-color: ${props => props.role === 'alert' ? '#b7434b' : '#47367a'};
+  }
 `
 
 export const RoomContent = styled.div`

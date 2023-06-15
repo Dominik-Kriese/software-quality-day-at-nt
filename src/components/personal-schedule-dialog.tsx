@@ -11,7 +11,7 @@ const ScheduleDialogWrapper = styled.div`
   left: 0;
   position: fixed;
   width: 100vw;
-  height: 100%;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;

@@ -68,6 +68,12 @@ const Links = styled.div`
 
 const IndexPage = () => {
     const [scheduleVisible, setScheduleVisible] = useState(false);
+
+    const updateScheduleVisibility = () => {
+        window.scrollTo({top: 0});
+        setScheduleVisible(!scheduleVisible);
+    }
+
     const joinLink = process.env.GATSBY_JOIN_LINK as string;
     return (
         <Wrapper>
@@ -76,7 +82,7 @@ const IndexPage = () => {
                 <JoinLink
                     href={joinLink}
                     target={'_blank'}>Join us in zoom <FontAwesomeIcon icon={faVideo}/></JoinLink>
-                <ScheduleButton onClick={() => setScheduleVisible(!scheduleVisible)}>Personal Schedule</ScheduleButton>
+                <ScheduleButton onClick={() => updateScheduleVisibility()}>Personal Schedule</ScheduleButton>
             </Links>
             {schedule.timeslots.map((timeslot, i) => <Timeslot key={`ts${i}`} timeslot={timeslot}/>)}
             {

@@ -12,8 +12,13 @@ export const RoomTitle = styled.div`
   background-color: ${props => props.role === 'alert' ? '#E9454E' : '#5B4897'};
   padding: 0.75rem 0.75rem 0.5rem;
   display: flex;
-  justify-content: space-between;
+  //justify-content: space-between;
+  align-items: center;
   cursor: pointer;
+  
+  span {
+    margin-left: 1rem;
+  }
   
   &:hover {
     background-color: ${props => props.role === 'alert' ? '#b7434b' : '#47367a'};

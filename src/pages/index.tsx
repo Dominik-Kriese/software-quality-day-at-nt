@@ -8,6 +8,7 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faVideo} from "@fortawesome/free-solid-svg-icons";
 import Timeslot from "../components/timeslot";
 import PersonalScheduleDialog from "../components/personal-schedule-dialog";
+import {navigate} from "gatsby";
 
 const Wrapper = styled.main`
   display: flex;
@@ -59,20 +60,30 @@ const ScheduleButton = styled(MainButton)`
   }
 `
 
+const Links = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+`
+
 const IndexPage = () => {
     const [scheduleVisible, setScheduleVisible] = useState(false);
-
+    const joinLink = process.env.GATSBY_JOIN_LINK as string;
+    console.log('link', joinLink)
     return (
         <Wrapper>
             <Headline>Software Quality Day Schedule</Headline>
-            <JoinLink
-                href={'https://novatec-gmbh.zoom.us/j/63581891508?pwd=VXJZcXQ2NCtTM2JPK1ZUV3ZmYnp4UT09&from=addon'}
-                target={'_blank'}>Join us in zoom <FontAwesomeIcon icon={faVideo}/></JoinLink>
-            <ScheduleButton onClick={() => setScheduleVisible(!scheduleVisible)}>Personal Schedule</ScheduleButton>
+            <Links>
+                <JoinLink
+                    href={joinLink}
+                    target={'_blank'}>Join us in zoom <FontAwesomeIcon icon={faVideo}/></JoinLink>
+                <ScheduleButton onClick={() => setScheduleVisible(!scheduleVisible)}>Personal Schedule</ScheduleButton>
+            </Links>
             {schedule.timeslots.map((timeslot, i) => <Timeslot key={`ts${i}`} timeslot={timeslot}/>)}
             {
                 scheduleVisible
-                    ? <PersonalScheduleDialog closeFn={() => setScheduleVisible(!scheduleVisible)}></PersonalScheduleDialog>
+                    ? <PersonalScheduleDialog
+                        closeFn={() => setScheduleVisible(!scheduleVisible)}></PersonalScheduleDialog>
                     : <></>
             }
         </Wrapper>

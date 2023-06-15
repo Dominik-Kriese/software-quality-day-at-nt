@@ -69,7 +69,6 @@ const Links = styled.div`
 const IndexPage = () => {
     const [scheduleVisible, setScheduleVisible] = useState(false);
     const joinLink = process.env.GATSBY_JOIN_LINK as string;
-    console.log('link', joinLink)
     return (
         <Wrapper>
             <Headline>Software Quality Day Schedule</Headline>

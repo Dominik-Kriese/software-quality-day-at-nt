@@ -8,6 +8,7 @@ import dayjs from "dayjs";
 
 export type TimeslotProps = {
     timeslot: TimeSlot;
+    id?: string;
 }
 
 const Sessions = styled.div`
@@ -29,7 +30,7 @@ const Timeslot = ({timeslot}: TimeslotProps) => {
     
     const headlineId = `headline_${dayjs(timeslot.from).format('HH')}`;
     return <fieldset aria-labelledby={headlineId}>
-        <TimeSlotHeadline timeslot={timeslot}></TimeSlotHeadline>
+        <TimeSlotHeadline timeslot={timeslot} id={headlineId}></TimeSlotHeadline>
         {
             timeslot.sessions && !timeslot.overarchingTopic
                 ? <Sessions>{timeslot.sessions.map(renderSession)}</Sessions>

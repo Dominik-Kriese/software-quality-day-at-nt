@@ -18,18 +18,9 @@ export const RoomTitle = styled.h3<{selected?: boolean}>`
   display: flex;
   //justify-content: space-between;
   align-items: center;
-  cursor: inherit;
   
   span {
     margin-left: 1rem;
-  }
-  
-  label {
-    cursor: inherit;
-  }
-  
-  input[type="checkbox"] {
-    cursor: inherit;
   }
 `
 

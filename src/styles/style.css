@@ -14,7 +14,7 @@ h2, h3, h4, h5, h6 {
 }
 
 /* make it clear clickable elements get cursor pointer */
-a, button, [tabindex], label, input[type="checkbox"], input[type="radio"] {
+a, button, [tabindex="0"], label, input[type="checkbox"], input[type="radio"] {
     cursor: pointer;
 }
 
@@ -56,7 +56,7 @@ html, body {
 
 .block-label a,
 .block-label button,
-.block-label [tabindex],
+.block-label [tabindex="0"],
 .block-label input[type="checkbox"]
 .block-label input[type="radio"] {
     position: relative;

@@ -16,15 +16,8 @@ const Wrapper = styled.main`
   align-items: center;
   margin-bottom: 2rem;
 
-  @media (min-width: 960px) {
-    width: 960px;
-    margin: 0 auto 2rem;
-  }
-
-  @media (max-width: 959px) {
-    width: calc(100% - 2rem);
-    padding: 1rem;
-  }
+  width: min(100% - 2rem, var(--container-max, 960px));
+  margin-inline: auto;
 `
 
 const Headline = styled.h1`
@@ -63,6 +56,7 @@ const ScheduleButton = styled(MainButton)`
 const Links = styled.div`
   width: 100%;
   display: flex;
+  gap: 1rem;
   justify-content: space-evenly;
 `
 

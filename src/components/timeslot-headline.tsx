@@ -1,6 +1,6 @@
 import * as React from "react";
 import styled from "styled-components";
-import * as dayjs from "dayjs";
+import dayjs from "dayjs";
 import {TimeSlot} from "../data/schedule";
 import {TimeslotProps} from "./timeslot";
 import {now} from "../data/now";
@@ -43,9 +43,9 @@ const TimeSlotHeadline = ({timeslot}: TimeslotProps) => {
         { !!sessionMarker ? <SessionMarker>
             <span>{sessionMarker}</span>
         </SessionMarker> : <></> }
-        <div>
+        <h2>
             {dayjs(timeslot.from).format('HH:mm')} to {dayjs(timeslot.to).format('HH:mm')}
-        </div>
+        </h2>
     </Headline>
 }
 

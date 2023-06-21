@@ -5,6 +5,11 @@ export const RoomCard = styled.div`
   border-radius: 5px;
   overflow: hidden;
   width: 100%;
+
+  &:hover {
+    cursor: pointer;
+    filter: brightness(1.125) saturate(1.5);
+  }
 `
 
 export const RoomTitle = styled.div`
@@ -14,14 +19,18 @@ export const RoomTitle = styled.div`
   display: flex;
   //justify-content: space-between;
   align-items: center;
-  cursor: pointer;
+  cursor: inherit;
   
   span {
     margin-left: 1rem;
   }
   
-  &:hover {
-    background-color: ${props => props.role === 'alert' ? '#b7434b' : '#47367a'};
+  label {
+    cursor: inherit;
+  }
+  
+  input[type="checkbox"] {
+    cursor: inherit;
   }
 `
 

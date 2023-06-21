@@ -30,10 +30,6 @@ const CheckSession = styled.input`
   border-radius: 0.25rem;
   transform: translateY(-0.075em);
   
-  &:hover {
-    cursor: pointer;
-  }
-  
   &:before {
     content: "";
     width: 0.875rem;
@@ -61,21 +57,31 @@ const SessionRoom = ({session, roomNumber, fromTime}: SessionProps) => {
         setIsMarked(isMarkedSession(roomNumber, fromTime));
     })
 
-    const addAsMarked = () => {
+    const addAsMarked = (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        console.log('adding');
         addMarkedSession(roomNumber, fromTime);
         setIsMarked(true);
     }
 
-    const removeAsMarked = () => {
+    const removeAsMarked = (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        console.log('removing');
         removeMarkedSession(roomNumber, fromTime);
         setIsMarked(false);
     }
 
-    return <RoomCard>
-        <RoomTitle role={isMarked ? 'alert' : 'heading'} onClick={isMarked ? removeAsMarked : addAsMarked}>
-            <CheckSession type={"checkbox"} checked={isMarked} onClick={isMarked ? removeAsMarked : addAsMarked}/>
-            <span>Room {roomNumber}</span>
-            <Hosted>by {session.host}</Hosted>
+    const id = `${session.roomNumber}${fromTime.getTime()}`
+
+    return <RoomCard onClick={isMarked ? removeAsMarked : addAsMarked}>
+        <RoomTitle role={isMarked ? 'alert' : 'heading'}>
+            <CheckSession id={id} type={"checkbox"} checked={isMarked}/>
+            <label htmlFor={id}>
+                <span>Room {roomNumber}</span>
+                <Hosted>by {session.host}</Hosted>
+            </label>
         </RoomTitle>
         <RoomContent>{session.name}</RoomContent>
     </RoomCard>

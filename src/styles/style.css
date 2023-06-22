@@ -1,10 +1,64 @@
+/* reset */
+
 * {
     margin: 0;
     padding: 0;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+h2, h3, h4, h5, h6 {
+    font-size: inherit;
+}
+
+/* make it clear clickable elements get cursor pointer */
+a, button, [tabindex="0"], label, input[type="checkbox"], input[type="radio"] {
+    cursor: pointer;
+}
+
+*:focus {
+    outline: 2px solid var(--outline, #fff);
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+fieldset {
+    display: block;
+    border: none;
+    width: 100%;
 }
 
 html, body {
     background-color: black;
     color: white;
     font-family: "Roboto Light", sans-serif;
+}
+
+/* Utility class: block-label component extends the clickable area of the label to the whole content */
+/* See: https://inclusive-components.design/cards/ by Heydon Pickering */
+
+.block-label {
+    position: relative;
+}
+
+.block-label label::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.block-label a,
+.block-label button,
+.block-label [tabindex="0"],
+.block-label input[type="checkbox"]
+.block-label input[type="radio"] {
+    position: relative;
+    z-index: 2;
 }

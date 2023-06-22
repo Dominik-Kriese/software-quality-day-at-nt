@@ -11,7 +11,6 @@ type SessionProps = {
     fromTime: Date
 }
 
-
 const Hosted = styled.span`
   color: #f4f2ff;
   font-size: 0.75rem;
@@ -57,27 +56,20 @@ const SessionRoom = ({session, roomNumber, fromTime}: SessionProps) => {
         setIsMarked(isMarkedSession(roomNumber, fromTime));
     })
 
-    const addAsMarked = (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-        console.log('adding');
+    const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+      setIsMarked(e.target.checked);
+      if (e.target.checked) {
         addMarkedSession(roomNumber, fromTime);
-        setIsMarked(true);
-    }
-
-    const removeAsMarked = (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-        console.log('removing');
+      } else {
         removeMarkedSession(roomNumber, fromTime);
-        setIsMarked(false);
+      }
     }
 
     const id = `${session.roomNumber}${fromTime.getTime()}`
 
-    return <RoomCard onClick={isMarked ? removeAsMarked : addAsMarked}>
-        <RoomTitle role={isMarked ? 'alert' : 'heading'}>
-            <CheckSession id={id} type={"checkbox"} checked={isMarked}/>
+    return <RoomCard className="block-label">
+        <RoomTitle selected={isMarked}>
+            <CheckSession id={id} type={"checkbox"} checked={isMarked} onChange={onChange} />
             <label htmlFor={id}>
                 <span>Room {roomNumber}</span>
                 <Hosted>by {session.host}</Hosted>

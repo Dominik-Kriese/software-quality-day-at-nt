@@ -1,6 +1,6 @@
 import * as React from "react";
 import styled from "styled-components";
-import * as dayjs from "dayjs";
+import dayjs from "dayjs";
 import {TimeSlot} from "../data/schedule";
 import {TimeslotProps} from "./timeslot";
 import {now} from "../data/now";
@@ -37,15 +37,15 @@ const calculateTimeSlotInformation = (timeslot: TimeSlot) => {
     return `${nextNote}${currentNote}`;
 }
 
-const TimeSlotHeadline = ({timeslot}: TimeslotProps) => {
+const TimeSlotHeadline = ({timeslot, id}: TimeslotProps) => {
     const sessionMarker = calculateTimeSlotInformation(timeslot);
     return <Headline>
         { !!sessionMarker ? <SessionMarker>
             <span>{sessionMarker}</span>
         </SessionMarker> : <></> }
-        <div>
+        <h2 id={id}>
             {dayjs(timeslot.from).format('HH:mm')} to {dayjs(timeslot.to).format('HH:mm')}
-        </div>
+        </h2>
     </Headline>
 }
 

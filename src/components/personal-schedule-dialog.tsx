@@ -41,6 +41,12 @@ const ScheduleTitle = styled.span`
 const ScheduleBody = styled.div`
   padding: 0 1rem 1.5rem;
   overflow: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  
+  &::-webkit-scrollbar {
+    display: none;
+  }
 `
 
 const CloseButton = styled.a`
